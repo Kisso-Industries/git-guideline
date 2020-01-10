@@ -102,7 +102,7 @@ fix #133
 ```
 
 
-## @- Revert
+## @-Revert
 
 > If the commit reverts a previous commit, it should begin with `revert:`, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
 
@@ -114,7 +114,7 @@ This reverts commit 676104e
 ```
 
 
-## @- Breaking Changes
+## @-Breaking Changes
 
 > Breaking changes MUST be indicated in the type/scope prefix of a commit, and/or as an entry in the footer.
 
