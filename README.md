@@ -1,6 +1,6 @@
 # Git Guideline
 
-> Commit Message Guidelines
+> Kisso Industries' Git Commit Message Guidelines
 
 We have rules over how our git commit messages can be formatted. This leads to **more**
 **readable messages **that are easy to follow when looking through the** project history**.  But also,
@@ -142,3 +142,46 @@ refactor!: drop support for Node 6
 Refactor to use JavaScript features not available in Node 6.
 
 ```
+
+# #FAQ
+
+**How should I deal with commit messages in the initial development phase?**
+
+We recommend that you proceed as if you’ve already released the product. Typically somebody, even if it’s your fellow software developers, is using your software. They’ll want to know what’s fixed, what breaks etc.
+
+
+**Are the types in the commit title uppercase or lowercase?**
+
+Any casing may be used, but it’s best to be consistent.
+
+
+**What do I do if the commit conforms to more than one of the commit types?**
+
+Go back and make multiple commits whenever possible. Part of the benefit of the guideline is its ability to drive us to make more organized commits and PRs.
+
+
+**Doesn’t this discourage rapid development and fast iteration?**
+
+It discourages moving fast in a disorganized way. It helps you be able to move fast long term across multiple projects with varied contributors.
+
+
+**Might this guideline lead developers to limit the type of commits they make because they’ll be thinking in the types provided?**
+
+The guideline encourages us to make more of certain types of commits such as fixes. Other than that, the flexibility of the guideline allows your team to come up with their own types and change those types over time.
+
+
+**How does this relate to SemVer?**
+
+fix type commits should be translated to PATCH releases. feat type commits should be translated to MINOR releases. Commits with BREAKING CHANGE in the commits, regardless of type, should be translated to MAJOR releases.
+
+
+## What do I do if I accidentally use the wrong commit type?
+**When you used a type that’s of the spec but not the correct type, e.g. fix instead of feat**
+
+Prior to merging or releasing the mistake, we recommend using git rebase -i to edit the commit history. After release, the cleanup will be different according to what tools and processes you use.
+
+
+**When you used a type not of the spec, e.g. feet instead of feat**
+
+In a worst case scenario, it’s not the end of the world if a commit lands that does not meet the conventional commit specification. It simply means that commit will be missed by tools that are based on the spec.
+
